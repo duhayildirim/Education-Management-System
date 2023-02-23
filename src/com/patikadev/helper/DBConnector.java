@@ -1,4 +1,4 @@
-package com.educationWebsite.helper;
+package com.patikadev.helper;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

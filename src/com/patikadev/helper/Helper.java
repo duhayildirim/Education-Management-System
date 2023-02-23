@@ -1,4 +1,4 @@
-package com.educationWebsite.helper;
+package com.patikadev.helper;
 
 import javax.swing.*;
 import java.awt.*;

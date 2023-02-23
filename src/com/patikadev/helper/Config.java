@@ -1,4 +1,4 @@
-package com.educationWebsite.helper;
+package com.patikadev.helper;
 
 public class Config {
     public static final String PROJECT_TITLE = "Patika.Dev";
