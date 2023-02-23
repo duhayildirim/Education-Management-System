@@ -1,5 +1,12 @@
 package com.educationWebsite.Model;
 
+import com.educationWebsite.Helper.DBConnecter;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
 public class User {
     private int id;
     private String name;
@@ -7,7 +14,8 @@ public class User {
     private String password;
     private String role;
 
-    public User() {}
+    public User() {
+    }
 
     public User(int id, String name, String username, String password, String role) {
         this.id = id;
@@ -55,5 +63,19 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public static ArrayList<User> getList() {
+        ArrayList<User> userList = new ArrayList<>();
+        String query = "SELECT * FROM user";
+        try {
+            Statement st = DBConnecter.getInstance().createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
