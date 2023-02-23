@@ -19,7 +19,7 @@ public class Helper {
         return flat;
     }
 
-    public static int appTheme() {
+    public static void appTheme() {
         for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
             if("Nimbus".equals(info.getName())){
                 try {
@@ -28,6 +28,7 @@ public class Helper {
                          UnsupportedLookAndFeelException e) {
                     throw new RuntimeException(e);
                 }
+                break;
             }
         }
     }
