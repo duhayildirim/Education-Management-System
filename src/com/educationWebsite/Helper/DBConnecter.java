@@ -2,6 +2,7 @@ package com.educationWebsite.Helper;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DBConnecter {
@@ -9,7 +10,9 @@ public class DBConnecter {
 
     public Connection connectDB() {
         try {
-            this.connect = DriverManager.getConnection(Config.DB_URL, Config.DB_USERNAME, Config.DB_PASSWORD);
+            DriverManager.getConnection("jdbc:mysql://localhost/?user=root&password=mysql");
+//            this.connect = DriverManager.getConnection(Config.DB_URL, Config.DB_USERNAME, Config.DB_PASSWORD);
+//            PreparedStatement ps = connect.prepareStatement(Config.DB_NAME);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
